@@ -286,8 +286,8 @@ tick();setInterval(tick,1000);
 /* opening */
 if(window.self!==window.top)document.documentElement.style.setProperty('--hoff','50px');
 document.querySelectorAll('.bl').forEach(r=>{for(let k=0;k<24;k++){const i=document.createElement('i'),t=Math.min(1,k/14),z=4+5*t;i.style.cssText='width:'+z+'px;height:'+z+'px;opacity:'+(.35+.65*t)+';box-shadow:0 0 '+(2+6*t)+'px rgba(244,165,43,'+(.25+.5*t)+')';r.appendChild(i)}});
-/* birthday song: put your own file at audio/birthday-song.mp3 (same name) or change SONG_SRC. If the file is missing, a built-in Happy Birthday tune plays instead. */
-const SONG_SRC='audio/birthday-song.mp3',SONG_START=106; /* 1:46 */
+/* birthday song: put your own file at ./birthday-song.mp3 (same name) or change SONG_SRC. If the file is missing, a built-in Happy Birthday tune plays instead. */
+const SONG_SRC='./birthday-song.mp3',SONG_START=106; /* 1:46 */
 const song=new Audio();song.preload='auto';song.src=SONG_SRC;let songStarted=0,songEnded=0,fbCtx=null,fbMode=0,fbEnd=0,songUnlocked=0;
 function unlockSong(){if(songUnlocked)return;songUnlocked=1;try{song.muted=true;const p=song.play();if(p&&p.then)p.then(()=>{song.pause();try{song.currentTime=SONG_START}catch(e){}song.muted=false}).catch(()=>{song.muted=false})}catch(e){}try{const AC=window.AudioContext||window.webkitAudioContext;if(AC){fbCtx=new AC();fbCtx.resume()}}catch(e){}}
 function playFallback(){return;if(!fbCtx||fbMode)return;fbMode=1;const N={C:261.63,D:293.66,E:329.63,F:349.23,G:392,A:440,B:493.88,c:523.25,d:587.33,e:659.25,f:698.46,g:783.99};
