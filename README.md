@@ -2,7 +2,7 @@
 
 Files
 - `index.html`: the whole website (GitHub Pages serves this file first)
-- `og-image.jpg`: 1200x630 link-preview thumbnail (red curtain with the new DP in a gold ring)
+- `og-image.jpg`: 1200x630 link-preview thumbnail (the NOW SHOWING curtain screen, countdown shown as 00:00:00:00)
 - `./birthday-song.mp3`: your song. It starts at 1:46 the moment the counter goes from 18 to 19 and keeps playing until the visitor presses Pause, the song ends, or the project finishes (the last chat message in the final section has been sent). A reload or restart resets everything, including the counter and the 1:46 start.
 - `.nojekyll`: tells GitHub Pages to serve the files as they are
 

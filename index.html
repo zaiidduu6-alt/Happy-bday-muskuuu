@@ -8,8 +8,8 @@
 <meta property="og:title" content="Happy Birthday Muskuuu · Now Showing">
 <meta property="og:description" content="Save the date · 23 October 2026 · Doors open at midnight, IST">
 <meta property="og:url" content="https://zaiidduu6-alt.github.io/Happy-bday-muskuuu/">
-<meta property="og:image" content="https://zaiidduu6-alt.github.io/Happy-bday-muskuuu/og-image.jpg?v=7">
-<meta property="og:image:secure_url" content="https://zaiidduu6-alt.github.io/Happy-bday-muskuuu/og-image.jpg?v=7">
+<meta property="og:image" content="https://zaiidduu6-alt.github.io/Happy-bday-muskuuu/og-image.jpg?v=8">
+<meta property="og:image:secure_url" content="https://zaiidduu6-alt.github.io/Happy-bday-muskuuu/og-image.jpg?v=8">
 <meta property="og:site_name" content="Happy Birthday Muskuuu">
 <meta property="og:locale" content="en_IN">
 <meta property="og:image:type" content="image/jpeg">
@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Happy Birthday Muskuuu · Now Showing">
 <meta name="twitter:description" content="Save the date · 23 October 2026 · Doors open at midnight, IST">
-<meta name="twitter:image" content="https://zaiidduu6-alt.github.io/Happy-bday-muskuuu/og-image.jpg?v=7">
+<meta name="twitter:image" content="https://zaiidduu6-alt.github.io/Happy-bday-muskuuu/og-image.jpg?v=8">
 <meta name="twitter:image:alt" content="Red stage curtain">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;800&family=Outfit:wght@400;600&family=Oswald:wght@500;700&family=Bebas+Neue&family=Caveat:wght@400;700&family=EB+Garamond&family=Fredoka:wght@700&family=Space+Mono&display=swap" rel="stylesheet">
 <style>
@@ -280,7 +280,7 @@ const pillT=()=>{const d=new Date();$('#pill').textContent='19Y · 00D · '+d.to
 
 /* live countdown to 23 Oct 2026 00:00 IST */
 const TARGET=new Date('2026-10-23T00:00:00+05:30').getTime();
-function tick(){let d=TARGET-Date.now(),done=d<=0;if(done)d=0;const S=Math.floor(d/1000),dd=Math.floor(S/86400),p=n=>String(n).padStart(2,'0');
+function tick(){let d=0,done=false;/* timer held at 00:00:00:00 */const S=Math.floor(d/1000),dd=Math.floor(S/86400),p=n=>String(n).padStart(2,'0');
  const ds=p(dd);$('#d1').textContent=ds[0];$('#d2').textContent=ds.slice(1);$('#hh').textContent=p(Math.floor(S%86400/3600));$('#mm').textContent=p(Math.floor(S%3600/60));$('#ss').textContent=p(S%60);
  if(done){$('#dl').textContent='DAYS TO CURTAIN';$('#dm').textContent='HAPPY BIRTHDAY MUSKUUU 🎂'}}
 tick();setInterval(tick,1000);
